@@ -42,8 +42,6 @@ public class JwtChannelInterceptor implements ChannelInterceptor {
             }
         }
 
-        System.out.println("--------------------통과------------------");
-
         return message;
     }
 }

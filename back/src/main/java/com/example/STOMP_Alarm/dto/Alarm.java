@@ -10,6 +10,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Alarm {
-    private String title;
+    private String from;
+    private String to;
     private String message;
 }

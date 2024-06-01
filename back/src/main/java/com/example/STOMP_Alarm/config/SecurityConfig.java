@@ -3,7 +3,6 @@ package com.example.STOMP_Alarm.config;
 import com.example.STOMP_Alarm.jwt.JWTFilter;
 import com.example.STOMP_Alarm.jwt.JWTUtil;
 import com.example.STOMP_Alarm.jwt.LoginFilter;
-import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;

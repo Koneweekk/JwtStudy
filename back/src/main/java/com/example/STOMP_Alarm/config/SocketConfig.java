@@ -16,8 +16,6 @@ public class SocketConfig implements WebSocketMessageBrokerConfigurer {
 
     private final JwtChannelInterceptor jwtChannelInterceptor;
 
-
-
     @Override
     public void configureMessageBroker(MessageBrokerRegistry registry) {
         // 구독 경로 설정하는 코드
@@ -36,8 +34,8 @@ public class SocketConfig implements WebSocketMessageBrokerConfigurer {
                 .setAllowedOrigins("*");
     }
 
-    // @Override
-    // public void configureClientInboundChannel(ChannelRegistration registration) {
-    //     registration.interceptors(jwtChannelInterceptor);
-    // }
+    @Override
+    public void configureClientInboundChannel(ChannelRegistration registration) {
+        registration.interceptors(jwtChannelInterceptor);
+    }
 }
