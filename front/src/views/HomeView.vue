@@ -27,7 +27,7 @@ onMounted(async () => {
 
 // 함수 - 유저정보 불러오기
 async function getUserInfo() {
-  fetch("http://localhost:8090/user", {
+  await fetch("http://localhost:8090/user", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -101,8 +101,8 @@ async function connectStomp() {
     },
     debug: (message) => console.log(message)
   });
-
-  stomp.activate();
+  
+  await stomp.activate();
 }
 
 // 함수 - 메시지 전송
